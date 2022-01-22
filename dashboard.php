@@ -1,45 +1,15 @@
 <?php
 //lier la connexion
+include "pagination.php";
 include "connexion.php";
-// creation d'un tableau
-$products=[
-    [
-        "id"=>1,
-        "name"=>"bracelet",
-        "date"=>"11/11/11",
-        "quantity"=>23
-    ],
-    [
-        "id"=>2,
-        "name"=>"kamal",
-        "date"=>"23/11/11",
-        "quantity"=>23
-    ],
-    [
-        "id"=>3,
-        "name"=>"khalid",
-        "date"=>"11/22/11",
-        "quantity"=>23
-    ],
-    [
-        "id"=>3,
-        "name"=>"khalid",
-        "date"=>"11/22/11",
-        "quantity"=>23
-    ],
-    [
-        "id"=>3,
-        "name"=>"khalid",
-        "date"=>"11/22/11",
-        "quantity"=>23
-    ],
-    [
-        "id"=>3,
-        "name"=>"khalid",
-        "date"=>"11/22/11",
-        "quantity"=>23
-    ]
-]
+
+// if(!isset($_POST['search'])){
+//     $req = 'select * from products';
+//     $stat = $pdo->prepare($req);
+//     $stat->execute();
+//     $records = $stat->fetchAll();
+// }
+
 
 ?>
 
@@ -63,7 +33,7 @@ $products=[
     </header>
     <div class="container">
         <div class="search">
-            <form action="sarch.php" method="post">
+            <form action="search.php" method="post">
                 <input type="text" name="search" class="search">
                 <button type="submit">Search</button>
             </form>
@@ -75,7 +45,6 @@ $products=[
             </div>
             <div class="table">
             <table>
-                <h2>Products</h2>
                    <tr>
                        <th>Images</th>
                        <th>Name</th>
@@ -83,15 +52,15 @@ $products=[
                        <th>Quantity</th>
                        <th>Update Or Delete</th>
                    </tr>
-                   <?php foreach($products as $value):?>
+                   <?php foreach($produits as $record):?>
                         <tr>
-                        <td><img class="images" src="images/photo.png" alt=""></td>
-                        <td><?= $value['name']?></td>
-                        <td><?= $value['date']?></td>
-                        <td><?= $value['quantity']?></td>
+                        <td><img class="images" src="upload/<?=$record['images']?>" alt=""></td>
+                        <td><?= $record['users']?></td>
+                        <td><?= $record['dates']?></td>
+                        <td><?= $record['quantity']?></td>
                         <td>
-                            <a href="delete.php?id=<?= $value['id']?>"><ion-icon name="trash-outline"></ion-icon></a>
-                            <a href="update.php?id=<?= $value['id']?>"><ion-icon name="create-outline"></ion-icon></a>
+                            <a href="delete.php?id=<?= $record['id']?>"><ion-icon name="trash-outline"></ion-icon></a>
+                            <a href="update.php?id=<?= $record['id']?>"><ion-icon name="create-outline"></ion-icon></a>
                         </td>
                     </tr>
                     <?php endforeach;?>
@@ -105,11 +74,12 @@ $products=[
       <div class="footer">
         <div class="paginnation">
                         <ol>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
+                                    <?php for($page = 1; $page <= $pages; $page++): ?>
+                                    <!-- Lien vers chacune des pages (activé si on se trouve sur la page correspondante) -->
+                                    <li class="<?= ($currentPage == $page) ? "active" : '' ?>">
+                                    <a href="dashboard.php?page=<?= $page ?>" class="page-link"><?= $page ?></a>
+                                    </li>
+                        <?php endfor ?>
                         </ol>
             </div>
             <div class="new">

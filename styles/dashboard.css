@@ -93,13 +93,22 @@ header .logout a{
 
 .container .products .table{
     width: 85%;
-    height: 40%;
+    display: flex;
 }
 
 .container .products .table table{
-    width: 100%;
-    font-size: 1.2rem;
+    font-size: .9rem;
 }
+
+.container .products .table table tr th{
+    width: 20%;
+    height: 20%;
+ }
+
+.container .products .table table tr td{
+    height: 15%;
+ }
+
 
 h2{
  color: rgb(255, 255, 255);
@@ -107,7 +116,7 @@ h2{
 }
 
 .images{
-    width: 6%;
+    width: 20%;
 }
 
 .container .products .table table tr{
@@ -115,12 +124,7 @@ h2{
  text-align: center;
 }
 
-th{
-    padding: 4px 10px;
-}
-td{
-    padding: 2px 5px;
-}
+
 
 
 
@@ -155,10 +159,22 @@ td{
 }
 
 .add .footer .new form input{
-    padding:0 1.5rem ;
+    padding:.3rem 1.5rem ;
+    border-radius: 15px;
+    font-weight: bolder;
     background-color: yellowgreen;
     
 }
+
+ol .active{
+    background-color: rgb(114, 109, 190) !important;
+    transform: scale(1.1) !important;
+}
+
+ol li{
+    margin-right: 15px;
+}
+
 
 
 
