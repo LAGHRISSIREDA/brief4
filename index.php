@@ -11,7 +11,7 @@
 <body>
   <div class="wrapper">
     <header>Login Form</header>
-    <form action="#">
+    <form action="login.php" method="post">
       <div class="field email">
         <div class="input-area">
           <input type="text" name="user" placeholder="Email Address" required>
@@ -28,7 +28,7 @@
         </div>
         <div class="error error-txt">Password can't be blank</div>
       </div>
-      <input type="submit" value="Login">
+      <input type="submit" name="submit" value="Login">
     </form>
   </div>
 </body>
