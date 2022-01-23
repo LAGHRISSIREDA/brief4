@@ -45,6 +45,7 @@ include "connexion.php";
             </div>
             <div class="table">
             <table>
+                <thead>
                    <tr>
                        <th>Images</th>
                        <th>Name</th>
@@ -52,6 +53,8 @@ include "connexion.php";
                        <th>Quantity</th>
                        <th>Update Or Delete</th>
                    </tr>
+                   </thead>
+                   <tbody>
                    <?php foreach($produits as $record):?>
                         <tr>
                         <td><img class="images" src="upload/<?=$record['images']?>" alt=""></td>
@@ -64,7 +67,7 @@ include "connexion.php";
                         </td>
                     </tr>
                     <?php endforeach;?>
-                
+                    </tbody>
             </table>
             </div>
         </div>

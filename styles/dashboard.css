@@ -93,20 +93,26 @@ header .logout a{
 
 .container .products .table{
     width: 85%;
-    display: flex;
+    height: 100%;
+    /* display: flex; */
 }
 
 .container .products .table table{
     font-size: .9rem;
+    width: 100%;
+    height: 100%;
 }
 
 .container .products .table table tr th{
     width: 20%;
-    height: 20%;
+    height: 30px;
+    
  }
+
 
 .container .products .table table tr td{
     height: 15%;
+    /* height: 70px; */
  }
 
 
@@ -200,3 +206,37 @@ ol li{
     text-align: center;
    
 } */
+/* responsive */
+
+@media only screen and (max-width: 722px) {
+    .container .products .aside{
+        display: none;
+    }
+
+    .container .products{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .add{
+        width: 100%;
+        margin:.1rem auto 0;
+        
+    
+    }
+
+    .add .vide{
+        display: none;
+    }
+    
+    .add .footer{
+        flex-direction: column;
+        margin: 0 auto;
+
+    }
+
+    .container .search{
+        align-self: center;
+     }
+  }
