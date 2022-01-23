@@ -18,7 +18,7 @@
             $_SESSION['password']=$_POST['password'];
             header('location:dashboard.php');
         }else{
-            header('location:index.html');
+            header('location:index.php');
         }
     }
 }
