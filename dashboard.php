@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(!isset($_SESSION['user'])&&!isset($_SESSION['password'])&&empty($_SESSION['user'])&&empty($_SESSION['password'])){
+    header('location:index.php');
+  }
 //lier la connexion
 include "pagination.php";
 include "connexion.php";

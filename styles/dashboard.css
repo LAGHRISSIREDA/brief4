@@ -61,6 +61,7 @@ header .logout a{
 
 .container .search{
    align-self: end;
+   margin-bottom: .3rem;
 }
 
 .container .products{
@@ -74,7 +75,7 @@ header .logout a{
 
 
 .container .products .aside{
-    width: 15%;
+    width: 20%;
     height: 100% ;
     display: flex;
     border-radius: 100px 10px / 100px;
@@ -137,7 +138,7 @@ h2{
 /* ---------------pagination--------------add */
 .add{
     width: 95%;
-    margin:.1rem auto 0;
+    margin:.3rem auto 0;
     display: flex;
     justify-self: center;
     align-items: center;
@@ -146,7 +147,7 @@ h2{
 }
 
 .add .vide{
-    width: 15%;
+    width: 20%;
 }
 
 .add .footer{
@@ -165,20 +166,25 @@ h2{
 }
 
 .add .footer .new form input{
-    padding:.3rem 1.5rem ;
-    border-radius: 15px;
+    padding:.1rem 1.5rem ;
+    border-radius: 100px 10px / 100px;
     font-weight: bolder;
     background-color: yellowgreen;
     
 }
 
 ol .active{
-    background-color: rgb(114, 109, 190) !important;
+    background-color: yellowgreen !important;
     transform: scale(1.1) !important;
 }
 
 ol li{
-    margin-right: 3px;
+    margin-right: 8px;
+    border-radius: 100px 10px / 100px;
+}
+ol li a{
+   text-decoration: none;
+   font-weight: bold;
 }
 
 

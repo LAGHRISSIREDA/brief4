@@ -1,4 +1,9 @@
 <?php
+//tester la session
+session_start();
+if(!isset($_SESSION['user'])&&!isset($_SESSION['password'])&&empty($_SESSION['user'])&&empty($_SESSION['password'])){
+    header('location:index.php');
+  }
 include "connexion.php";
 $users=$_POST['user'];
 $dates=$_POST['date'];

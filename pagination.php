@@ -45,7 +45,7 @@ $pages = ceil($nbArticles / $parPage);
 // Calcul du 1er article de la page
 $premier = ($currentPage * $parPage) - $parPage;
 
-$sql = 'SELECT * FROM `products` ORDER BY `id`  LIMIT :premier, :parpage;';
+$sql = 'SELECT * FROM `products` ORDER BY `id` DESC LIMIT :premier, :parpage;';
 
 // On prépare la requête
 $query = $pdo->prepare($sql);
