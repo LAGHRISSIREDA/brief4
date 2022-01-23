@@ -2,13 +2,17 @@
 // On se connecte à là base de données
 
 include "connexion.php";
-$sql = 'SELECT * FROM `products` ORDER BY `id`;';
 
-// On prépare la requête
-$query = $pdo->prepare($sql);
+$search ="";
+    
+    $sql = 'SELECT * FROM  `products` ORDER BY `id`;';
+    
+    // On prépare la requête
+    $query = $pdo->prepare($sql);
+    
+    // On exécute
+    $query->execute();
 
-// On exécute
-$query->execute();
 
 // On récupère les valeurs dans un tableau associatif
 $articles = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -45,13 +49,25 @@ $pages = ceil($nbArticles / $parPage);
 // Calcul du 1er article de la page
 $premier = ($currentPage * $parPage) - $parPage;
 
-$sql = 'SELECT * FROM `products` ORDER BY `id` DESC LIMIT :premier, :parpage;';
-
+if(isset($_POST['search'])){
+ 
+        $search = $_POST['searchname'];
+        $sql = 'SELECT * FROM products where users=:name  ORDER BY id DESC LIMIT :premier, :parpage;';
+  
+        $query->bindValue(':name', $search, PDO::PARAM_STR);
+    }else{
+        $sql = 'SELECT * FROM `products` ORDER BY `id` DESC LIMIT :premier, :parpage;';
+       
+    }
 // On prépare la requête
 $query = $pdo->prepare($sql);
 
+if(isset($_POST['search'])){
+     $query->bindValue(':name', $search, PDO::PARAM_STR);
+}
 $query->bindValue(':premier', $premier, PDO::PARAM_INT);
 $query->bindValue(':parpage', $parPage, PDO::PARAM_INT);
+
 
 // On exécute
 $query->execute();

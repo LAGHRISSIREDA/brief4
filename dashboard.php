@@ -37,14 +37,14 @@ include "connexion.php";
     </header>
     <div class="container">
         <div class="search">
-            <form action="search.php" method="post">
-                <input type="text" name="search" class="search">
-                <button type="submit">Search</button>
+            <form action="" method="post">
+                <input type="text" name="searchname" class="search">
+                <button type="submit" name="search">Search</button>
             </form>
         </div>
         <div class="products">
             <div class="aside">
-                <h3>Dashboard</h3>
+               <a href="dashboard.php"> <h3>Dashboard</h3></a>
 
             </div>
             <div class="table">
@@ -96,6 +96,9 @@ include "connexion.php";
             </div>
       </div>
     </div>
+    <footer>
+        <p>Copyright &copy;</p>
+    </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

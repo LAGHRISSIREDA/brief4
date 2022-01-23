@@ -12,10 +12,10 @@
         <form class="form" action="ajouter.php" method="post"  enctype='multipart/form-data' >
             <div class="pageTitle title">Add New Product </div>
             <div class="secondaryTitle title">Please fill this form </div>
-            <input type="text" name="user" id="name" class="name formEntry" placeholder="Name Product" />
-            <input type="date" name="date" id="date" class="email formEntry"/>
-            <input type="number" name="quantity" class="email formEntry" id="message" placeholder="quantity">
-            <input type="file" name="file" class="email formEntry" id="message" placeholder="images">
+            <input type="text" name="user" id="name" required class="name formEntry" placeholder="Name Product" />
+            <input type="date" name="date" id="date" required class="email formEntry"/>
+            <input type="number" name="quantity" required class="email formEntry" id="message" placeholder="quantity">
+            <input type="file" name="file" required class="file formEntry" id="message" placeholder="images">
             <button name="submit" class="submit formEntry" >Submit</button>
           </form>
     </div>
