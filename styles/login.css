@@ -11,8 +11,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    
 }
+
+
 
 .container form .user label{
     width: 20%;

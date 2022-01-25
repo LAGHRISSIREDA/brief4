@@ -53,7 +53,7 @@ include "connexion.php";
                    <tr>
                        <th>Images</th>
                        <th>Name</th>
-                       <th>Date</th>
+                       <th>Cost</th>
                        <th>Quantity</th>
                        <th>Update Or Delete</th>
                    </tr>

@@ -21,6 +21,16 @@ body{
   border-radius: 5px;
   text-align: center;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.233);
+  transform: translateY(1px);
+    animation: loup 3s infinite;
+}
+
+@keyframes loup {
+  0%{transform: translateY(1px);}
+  25%{transform: translateY(-4px);}
+  50%{transform: translateY(1px);}
+  75%{transform: translateY(4px);}
+  100%{transform: translateY(1px);}
 }
 .wrapper header{
   font-size: 35px;

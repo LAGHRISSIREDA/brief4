@@ -40,7 +40,7 @@ if(isset($_GET['id'])&&!empty($_GET['id'])){
             <div class="secondaryTitle title">Please fill this form </div>
             <input type="text" style="display:none" value="<?=$produit['id']?>" name="idp" id="name" class="name formEntry" placeholder="Name Product" />
             <input type="text" value="<?=$produit['users']?>" name="user" id="name" class="name formEntry" placeholder="Name Product" />
-            <input type="date" value="<?=$produit['dates']?>" name="date" id="date" class="email formEntry"/>
+            <input type="number" placeholder="Cost" value="<?=$produit['dates']?>" name="date" id="date" class="email formEntry"/>
             <input type="number" value="<?=$produit['quantity']?>" name="quantity" class="email formEntry" id="message" placeholder="quantity">
             <button name="submitinfos" class="submit formEntry" >Submit</button>
           </form>
