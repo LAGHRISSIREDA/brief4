@@ -36,8 +36,8 @@ if(isset($_GET['id'])&&!empty($_GET['id'])){
 <body>
 <div class="container-form">
         <form class="form" action="modifier.php" method="post"  enctype='multipart/form-data' >
-            <div class="pageTitle title">Add New Product </div>
-            <div class="secondaryTitle title">Please fill this form </div>
+            <div class="pageTitle title">modify Product </div>
+            <div class="secondaryTitle title">Update Your Product</div>
             <input type="text" style="display:none" value="<?=$produit['id']?>" name="idp" id="name" class="name formEntry" placeholder="Name Product" />
             <input type="text" value="<?=$produit['users']?>" name="user" id="name" class="name formEntry" placeholder="Name Product" />
             <input type="number" placeholder="Cost" value="<?=$produit['dates']?>" name="date" id="date" class="email formEntry"/>

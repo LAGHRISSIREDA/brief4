@@ -7,17 +7,17 @@ $search ="";
     
     $sql = 'SELECT * FROM  `products` ORDER BY `id`;';
     
-    // On prépare la requête
+    // On prepare la requête
     $query = $pdo->prepare($sql);
     
-    // On exécute
+    // execution
     $query->execute();
 
 
-// On récupère les valeurs dans un tableau associatif
+// table associatif
 $articles = $query->fetchAll(PDO::FETCH_ASSOC);
 
-// On détermine sur quelle page on se trouve
+// On se position sur quel page on est
 if(isset($_GET['page']) && !empty($_GET['page'])){
     $currentPage = (int) strip_tags($_GET['page']);
 }else{
@@ -53,11 +53,8 @@ if(isset($_POST['search'])){
  
         $search = $_POST['searchname'];
         $sql = 'SELECT * FROM products where users=:name  ORDER BY id DESC LIMIT :premier, :parpage;';
-  
-        $query->bindValue(':name', $search, PDO::PARAM_STR);
     }else{
         $sql = 'SELECT * FROM `products` ORDER BY `id` DESC LIMIT :premier, :parpage;';
-       
     }
 // On prépare la requête
 $query = $pdo->prepare($sql);

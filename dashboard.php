@@ -29,7 +29,7 @@ include "connexion.php";
 <body>
     <header>
         <div class="logo">
-            <img src="images/logoW.png" alt="">
+            <a href="dashboard.php"><img src="images/logoW.png" alt=""></a>
         </div>
         <div class="logout">
             <a href="logout.php">Log Out</a>
@@ -66,8 +66,8 @@ include "connexion.php";
                         <td><?= $record['dates']?></td>
                         <td><?= $record['quantity']?></td>
                         <td>
-                            <a href="delete.php?id=<?= $record['id']?>"><ion-icon name="trash-outline"></ion-icon></a>
-                            <a href="update.php?id=<?= $record['id']?>"><ion-icon name="create-outline"></ion-icon></a>
+                            <a href="delete.php?id=<?= $record['id']?>"><ion-icon class="delete" name="trash-outline"></ion-icon></a>
+                            <a href="update.php?id=<?= $record['id']?>"><ion-icon class="edit" name="create-outline"></ion-icon></a>
                         </td>
                     </tr>
                     <?php endforeach;?>

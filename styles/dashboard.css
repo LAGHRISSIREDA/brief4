@@ -9,14 +9,17 @@ body{
   width: 100%;
   height: 100vh;
   background: #F2F0CE;
+ 
 }
+
+
 
 header,footer{
     padding: 1rem;
     border-radius: 10px 100px / 120px;
     width: 95%;
     box-shadow: -1px 1px 5px rgb(0, 0, 0);
-    margin: 10px auto 0px;
+    margin: 0px auto 0px;
     background:#5739B9;
     display: flex;
     justify-content: space-around;
@@ -29,7 +32,7 @@ header .logo{
 }
 
 header .logo img{
-    width: 100%; 
+    width: 5rem; 
 }
 
 header .logout{
@@ -117,7 +120,22 @@ h2{
 }
 
 .images{
-    width: 20%;
+    width: 50px;
+    
+}
+
+ion-icon{
+    width: 30%;
+    font-size: 1rem;
+   
+}
+
+.delete{
+    color: red;
+}
+
+.edit{
+    color:green;
 }
 
 .container .products .table table tr{
@@ -228,15 +246,33 @@ footer p{
         display: none;
     }
 
+
+    header{
+        width: 100%;
+      
+    }
+
+    header{
+        margin-top: 0;
+    }
+    footer{
+        margin-top: 25px;
+        display: none;
+    }
+
     .container .products{
         flex-direction: column;
         align-items: center;
         
     }
 
+    .container .products{
+        height: 380px; 
+    }
+
     .add{
         width: 100%;
-        margin:.1rem auto 0;
+        margin:0 auto 0;
         
     
     }
@@ -245,10 +281,15 @@ footer p{
         display: none;
     }
     
-    .add .footer{
+    .images{
+        width: 30%;
+    }
+    
+    .add {
         flex-direction: column;
+        padding: 1rem;
         margin: 0 auto;
-
+        gap: 1rem;
     }
 
     .container .search{
@@ -257,8 +298,7 @@ footer p{
   }
 
 
-  @media only screen and (max-width: 490px) {
-    .container{
-        width: 490px;
-    }
-  }
+  
+    
+    
+  

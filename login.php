@@ -13,6 +13,7 @@
         ]);
 
         $user = $req->fetch();
+        // var_dump($user);
         // if true il y a un enregistrement
         if($user){
             $_SESSION['user']=$_POST['user'];
